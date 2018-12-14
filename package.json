@@ -1,0 +1,50 @@
+{
+  "_args": [
+    [
+      "react-native-euromsg@1.0.4",
+      "/Users/saitbanazili/pencerern"
+    ]
+  ],
+  "_from": "react-native-euromsg@1.0.4",
+  "_id": "react-native-euromsg@1.0.4",
+  "_inBundle": false,
+  "_integrity": "sha512-YNy80IOuE3b7JFvhVvArI7qZPonFrKzW/NCgeZnSzUVhcFfcIpXFvpYOsEXjD18UGyUItCdrG9VoX+hc6W5anA==",
+  "_location": "/react-native-euromsg",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "react-native-euromsg@1.0.4",
+    "name": "react-native-euromsg",
+    "escapedName": "react-native-euromsg",
+    "rawSpec": "1.0.4",
+    "saveSpec": null,
+    "fetchSpec": "1.0.4"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-euromsg/-/react-native-euromsg-1.0.4.tgz",
+  "_spec": "1.0.4",
+  "_where": "/Users/saitbanazili/pencerern",
+  "author": {
+    "name": "Sait Banazılı"
+  },
+  "description": "## Getting started",
+  "devDependencies": {
+    "react-native": "^0.57.5"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "license": "",
+  "main": "index.js",
+  "name": "react-native-euromsg",
+  "peerDependencies": {
+    "react-native": ">=^0.56.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.0"
+}
