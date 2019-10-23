@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "saitbnzl" => "saitbnzl@gmail.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/DylanVann/react-native-fast-image.git" }
+  s.source       = { :git => "https://github.com/saitbnzl/ReactNativeEuromsg.git" }
   s.source_files = "ios/**/*.{h,m}"
   s.requires_arc = true
 
