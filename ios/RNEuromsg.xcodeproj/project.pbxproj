@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8252AAE21A0EBE700367C19 /* EMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A7F21A0EBE700367C19 /* EMLocation.m */; };
+		D8252AAF21A0EBE700367C19 /* EMMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A8521A0EBE700367C19 /* EMMessage.m */; };
+		D8252AB021A0EBE700367C19 /* EMInteractiveAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A8821A0EBE700367C19 /* EMInteractiveAction.m */; };
+		D8252AB121A0EBE700367C19 /* EMBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A8921A0EBE700367C19 /* EMBaseRequest.m */; };
+		D8252AB221A0EBE700367C19 /* EuroManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A8B21A0EBE700367C19 /* EuroManager.m */; };
+		D8252AB321A0EBE700367C19 /* EMSettingsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A8C21A0EBE700367C19 /* EMSettingsRequest.m */; };
+		D8252AB421A0EBE700367C19 /* EMRetentionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A8E21A0EBE700367C19 /* EMRetentionRequest.m */; };
+		D8252AB521A0EBE700367C19 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A8F21A0EBE700367C19 /* BaseObject.m */; };
+		D8252AB621A0EBE700367C19 /* EMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A9221A0EBE700367C19 /* EMTools.m */; };
+		D8252AB721A0EBE700367C19 /* EMURLSessionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A9321A0EBE700367C19 /* EMURLSessionDelegate.m */; };
+		D8252AB821A0EBE700367C19 /* EMSettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252A9521A0EBE700367C19 /* EMSettingsModel.m */; };
+		D8252AC021A0EBE700367C19 /* EMConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252AAC21A0EBE700367C19 /* EMConnectionManager.m */; };
+		D8252AC121A0EBE700367C19 /* EMRegisterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8252AAD21A0EBE700367C19 /* EMRegisterRequest.m */; };
+		D86F612421A250B700055B9A /* RNEuromsgEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = D86F612321A250B700055B9A /* RNEuromsgEventEmitter.m */; };
+		D86F612921A2533F00055B9A /* RNEuromsgEventEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = D86F612821A2533F00055B9A /* RNEuromsgEventEmitter.h */; };
+		D870D45E21A6B17500E64263 /* EMJSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = D870D44C21A6B17500E64263 /* EMJSONModelLib.h */; };
+		D870D45F21A6B17500E64263 /* NSArray+EMJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D870D44E21A6B17500E64263 /* NSArray+EMJSONModel.m */; };
+		D870D46021A6B17500E64263 /* NSArray+EMJSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D870D44F21A6B17500E64263 /* NSArray+EMJSONModel.h */; };
+		D870D46121A6B17500E64263 /* EMJSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D870D45121A6B17500E64263 /* EMJSONKeyMapper.m */; };
+		D870D46221A6B17500E64263 /* EMJSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D870D45221A6B17500E64263 /* EMJSONValueTransformer.m */; };
+		D870D46321A6B17500E64263 /* EMJSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = D870D45321A6B17500E64263 /* EMJSONKeyMapper.h */; };
+		D870D46421A6B17500E64263 /* EMJSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = D870D45421A6B17500E64263 /* EMJSONValueTransformer.h */; };
+		D870D46521A6B17500E64263 /* EMJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D870D45621A6B17500E64263 /* EMJSONModel.m */; };
+		D870D46621A6B17500E64263 /* EMJSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = D870D45721A6B17500E64263 /* EMJSONModelError.m */; };
+		D870D46721A6B17500E64263 /* EMJSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = D870D45821A6B17500E64263 /* EMJSONModelArray.h */; };
+		D870D46821A6B17500E64263 /* EMJSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D870D45921A6B17500E64263 /* EMJSONModelClassProperty.m */; };
+		D870D46921A6B17500E64263 /* EMJSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D870D45A21A6B17500E64263 /* EMJSONModel.h */; };
+		D870D46A21A6B17500E64263 /* EMJSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = D870D45B21A6B17500E64263 /* EMJSONModelError.h */; };
+		D870D46B21A6B17500E64263 /* EMJSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = D870D45C21A6B17500E64263 /* EMJSONModelClassProperty.h */; };
+		D870D46C21A6B17500E64263 /* EMJSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D870D45D21A6B17500E64263 /* EMJSONModelArray.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		134814201AA4EA6300B7C361 /* libRNEuromsg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNEuromsg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8252A7E21A0EBE700367C19 /* EMRetentionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRetentionRequest.h; sourceTree = "<group>"; };
+		D8252A7F21A0EBE700367C19 /* EMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMLocation.m; sourceTree = "<group>"; };
+		D8252A8021A0EBE700367C19 /* EMSettingsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSettingsRequest.h; sourceTree = "<group>"; };
+		D8252A8121A0EBE700367C19 /* EuroManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EuroManager.h; sourceTree = "<group>"; };
+		D8252A8221A0EBE700367C19 /* BaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
+		D8252A8321A0EBE700367C19 /* EMURLSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMURLSessionDelegate.h; sourceTree = "<group>"; };
+		D8252A8421A0EBE700367C19 /* EMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTools.h; sourceTree = "<group>"; };
+		D8252A8521A0EBE700367C19 /* EMMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMessage.m; sourceTree = "<group>"; };
+		D8252A8621A0EBE700367C19 /* EMRegisterRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRegisterRequest.h; sourceTree = "<group>"; };
+		D8252A8721A0EBE700367C19 /* EMConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConnectionManager.h; sourceTree = "<group>"; };
+		D8252A8821A0EBE700367C19 /* EMInteractiveAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMInteractiveAction.m; sourceTree = "<group>"; };
+		D8252A8921A0EBE700367C19 /* EMBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBaseRequest.m; sourceTree = "<group>"; };
+		D8252A8A21A0EBE700367C19 /* EMSettingsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSettingsModel.h; sourceTree = "<group>"; };
+		D8252A8B21A0EBE700367C19 /* EuroManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EuroManager.m; sourceTree = "<group>"; };
+		D8252A8C21A0EBE700367C19 /* EMSettingsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSettingsRequest.m; sourceTree = "<group>"; };
+		D8252A8D21A0EBE700367C19 /* EMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLocation.h; sourceTree = "<group>"; };
+		D8252A8E21A0EBE700367C19 /* EMRetentionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRetentionRequest.m; sourceTree = "<group>"; };
+		D8252A8F21A0EBE700367C19 /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
+		D8252A9021A0EBE700367C19 /* EMMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMessage.h; sourceTree = "<group>"; };
+		D8252A9121A0EBE700367C19 /* EMLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMLogging.h; sourceTree = "<group>"; };
+		D8252A9221A0EBE700367C19 /* EMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMTools.m; sourceTree = "<group>"; };
+		D8252A9321A0EBE700367C19 /* EMURLSessionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMURLSessionDelegate.m; sourceTree = "<group>"; };
+		D8252A9421A0EBE700367C19 /* EuroFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EuroFramework.h; sourceTree = "<group>"; };
+		D8252A9521A0EBE700367C19 /* EMSettingsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSettingsModel.m; sourceTree = "<group>"; };
+		D8252AA921A0EBE700367C19 /* EMInteractiveAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMInteractiveAction.h; sourceTree = "<group>"; };
+		D8252AAA21A0EBE700367C19 /* EMBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBaseRequest.h; sourceTree = "<group>"; };
+		D8252AAB21A0EBE700367C19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8252AAC21A0EBE700367C19 /* EMConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMConnectionManager.m; sourceTree = "<group>"; };
+		D8252AAD21A0EBE700367C19 /* EMRegisterRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRegisterRequest.m; sourceTree = "<group>"; };
+		D86F612321A250B700055B9A /* RNEuromsgEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNEuromsgEventEmitter.m; sourceTree = "<group>"; };
+		D86F612821A2533F00055B9A /* RNEuromsgEventEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNEuromsgEventEmitter.h; sourceTree = "<group>"; };
+		D870D44C21A6B17500E64263 /* EMJSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMJSONModelLib.h; sourceTree = "<group>"; };
+		D870D44E21A6B17500E64263 /* NSArray+EMJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+EMJSONModel.m"; sourceTree = "<group>"; };
+		D870D44F21A6B17500E64263 /* NSArray+EMJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+EMJSONModel.h"; sourceTree = "<group>"; };
+		D870D45121A6B17500E64263 /* EMJSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMJSONKeyMapper.m; sourceTree = "<group>"; };
+		D870D45221A6B17500E64263 /* EMJSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMJSONValueTransformer.m; sourceTree = "<group>"; };
+		D870D45321A6B17500E64263 /* EMJSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMJSONKeyMapper.h; sourceTree = "<group>"; };
+		D870D45421A6B17500E64263 /* EMJSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMJSONValueTransformer.h; sourceTree = "<group>"; };
+		D870D45621A6B17500E64263 /* EMJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMJSONModel.m; sourceTree = "<group>"; };
+		D870D45721A6B17500E64263 /* EMJSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMJSONModelError.m; sourceTree = "<group>"; };
+		D870D45821A6B17500E64263 /* EMJSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMJSONModelArray.h; sourceTree = "<group>"; };
+		D870D45921A6B17500E64263 /* EMJSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMJSONModelClassProperty.m; sourceTree = "<group>"; };
+		D870D45A21A6B17500E64263 /* EMJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMJSONModel.h; sourceTree = "<group>"; };
+		D870D45B21A6B17500E64263 /* EMJSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMJSONModelError.h; sourceTree = "<group>"; };
+		D870D45C21A6B17500E64263 /* EMJSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMJSONModelClassProperty.h; sourceTree = "<group>"; };
+		D870D45D21A6B17500E64263 /* EMJSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMJSONModelArray.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		134814211AA4EA7D00B7C361 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				134814201AA4EA6300B7C361 /* libRNEuromsg.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58B511D21A9E6C8500147676 = {
+			isa = PBXGroup;
+			children = (
+				D86F612821A2533F00055B9A /* RNEuromsgEventEmitter.h */,
+				D86F612321A250B700055B9A /* RNEuromsgEventEmitter.m */,
+				D8252A7D21A0EBE700367C19 /* euroiosframework */,
+				134814211AA4EA7D00B7C361 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8252A7D21A0EBE700367C19 /* euroiosframework */ = {
+			isa = PBXGroup;
+			children = (
+				D870D44B21A6B17500E64263 /* JSONModel */,
+				D8252A7E21A0EBE700367C19 /* EMRetentionRequest.h */,
+				D8252A7F21A0EBE700367C19 /* EMLocation.m */,
+				D8252A8021A0EBE700367C19 /* EMSettingsRequest.h */,
+				D8252A8121A0EBE700367C19 /* EuroManager.h */,
+				D8252A8221A0EBE700367C19 /* BaseObject.h */,
+				D8252A8321A0EBE700367C19 /* EMURLSessionDelegate.h */,
+				D8252A8421A0EBE700367C19 /* EMTools.h */,
+				D8252A8521A0EBE700367C19 /* EMMessage.m */,
+				D8252A8621A0EBE700367C19 /* EMRegisterRequest.h */,
+				D8252A8721A0EBE700367C19 /* EMConnectionManager.h */,
+				D8252A8821A0EBE700367C19 /* EMInteractiveAction.m */,
+				D8252A8921A0EBE700367C19 /* EMBaseRequest.m */,
+				D8252A8A21A0EBE700367C19 /* EMSettingsModel.h */,
+				D8252A8B21A0EBE700367C19 /* EuroManager.m */,
+				D8252A8C21A0EBE700367C19 /* EMSettingsRequest.m */,
+				D8252A8D21A0EBE700367C19 /* EMLocation.h */,
+				D8252A8E21A0EBE700367C19 /* EMRetentionRequest.m */,
+				D8252A8F21A0EBE700367C19 /* BaseObject.m */,
+				D8252A9021A0EBE700367C19 /* EMMessage.h */,
+				D8252A9121A0EBE700367C19 /* EMLogging.h */,
+				D8252A9221A0EBE700367C19 /* EMTools.m */,
+				D8252A9321A0EBE700367C19 /* EMURLSessionDelegate.m */,
+				D8252A9421A0EBE700367C19 /* EuroFramework.h */,
+				D8252A9521A0EBE700367C19 /* EMSettingsModel.m */,
+				D8252AA921A0EBE700367C19 /* EMInteractiveAction.h */,
+				D8252AAA21A0EBE700367C19 /* EMBaseRequest.h */,
+				D8252AAB21A0EBE700367C19 /* Info.plist */,
+				D8252AAC21A0EBE700367C19 /* EMConnectionManager.m */,
+				D8252AAD21A0EBE700367C19 /* EMRegisterRequest.m */,
+			);
+			path = euroiosframework;
+			sourceTree = "<group>";
+		};
+		D870D44B21A6B17500E64263 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				D870D44C21A6B17500E64263 /* EMJSONModelLib.h */,
+				D870D44D21A6B17500E64263 /* JSONModelCategories */,
+				D870D45021A6B17500E64263 /* JSONModelTransformations */,
+				D870D45521A6B17500E64263 /* JSONModel */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		D870D44D21A6B17500E64263 /* JSONModelCategories */ = {
+			isa = PBXGroup;
+			children = (
+				D870D44E21A6B17500E64263 /* NSArray+EMJSONModel.m */,
+				D870D44F21A6B17500E64263 /* NSArray+EMJSONModel.h */,
+			);
+			path = JSONModelCategories;
+			sourceTree = "<group>";
+		};
+		D870D45021A6B17500E64263 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				D870D45121A6B17500E64263 /* EMJSONKeyMapper.m */,
+				D870D45221A6B17500E64263 /* EMJSONValueTransformer.m */,
+				D870D45321A6B17500E64263 /* EMJSONKeyMapper.h */,
+				D870D45421A6B17500E64263 /* EMJSONValueTransformer.h */,
+			);
+			path = JSONModelTransformations;
+			sourceTree = "<group>";
+		};
+		D870D45521A6B17500E64263 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				D870D45621A6B17500E64263 /* EMJSONModel.m */,
+				D870D45721A6B17500E64263 /* EMJSONModelError.m */,
+				D870D45821A6B17500E64263 /* EMJSONModelArray.h */,
+				D870D45921A6B17500E64263 /* EMJSONModelClassProperty.m */,
+				D870D45A21A6B17500E64263 /* EMJSONModel.h */,
+				D870D45B21A6B17500E64263 /* EMJSONModelError.h */,
+				D870D45C21A6B17500E64263 /* EMJSONModelClassProperty.h */,
+				D870D45D21A6B17500E64263 /* EMJSONModelArray.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D86F611E21A22C3C00055B9A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D870D46421A6B17500E64263 /* EMJSONValueTransformer.h in Headers */,
+				D870D46021A6B17500E64263 /* NSArray+EMJSONModel.h in Headers */,
+				D870D46921A6B17500E64263 /* EMJSONModel.h in Headers */,
+				D870D46721A6B17500E64263 /* EMJSONModelArray.h in Headers */,
+				D870D46321A6B17500E64263 /* EMJSONKeyMapper.h in Headers */,
+				D870D45E21A6B17500E64263 /* EMJSONModelLib.h in Headers */,
+				D86F612921A2533F00055B9A /* RNEuromsgEventEmitter.h in Headers */,
+				D870D46B21A6B17500E64263 /* EMJSONModelClassProperty.h in Headers */,
+				D870D46A21A6B17500E64263 /* EMJSONModelError.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		58B511DA1A9E6C8500147676 /* RNEuromsg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNEuromsg" */;
+			buildPhases = (
+				D86F611E21A22C3C00055B9A /* Headers */,
+				58B511D71A9E6C8500147676 /* Sources */,
+				58B511D81A9E6C8500147676 /* Frameworks */,
+				58B511D91A9E6C8500147676 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNEuromsg;
+			productName = RCTDataManager;
+			productReference = 134814201AA4EA6300B7C361 /* libRNEuromsg.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58B511D31A9E6C8500147676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					58B511DA1A9E6C8500147676 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNEuromsg" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58B511D21A9E6C8500147676;
+			productRefGroup = 58B511D21A9E6C8500147676;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58B511DA1A9E6C8500147676 /* RNEuromsg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58B511D71A9E6C8500147676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8252AB821A0EBE700367C19 /* EMSettingsModel.m in Sources */,
+				D8252AB121A0EBE700367C19 /* EMBaseRequest.m in Sources */,
+				D8252AAE21A0EBE700367C19 /* EMLocation.m in Sources */,
+				D870D46521A6B17500E64263 /* EMJSONModel.m in Sources */,
+				D86F612421A250B700055B9A /* RNEuromsgEventEmitter.m in Sources */,
+				D870D46821A6B17500E64263 /* EMJSONModelClassProperty.m in Sources */,
+				D870D46C21A6B17500E64263 /* EMJSONModelArray.m in Sources */,
+				D8252AB421A0EBE700367C19 /* EMRetentionRequest.m in Sources */,
+				D8252AC021A0EBE700367C19 /* EMConnectionManager.m in Sources */,
+				D870D46121A6B17500E64263 /* EMJSONKeyMapper.m in Sources */,
+				D870D45F21A6B17500E64263 /* NSArray+EMJSONModel.m in Sources */,
+				D8252AB621A0EBE700367C19 /* EMTools.m in Sources */,
+				D8252AB721A0EBE700367C19 /* EMURLSessionDelegate.m in Sources */,
+				D8252AB321A0EBE700367C19 /* EMSettingsRequest.m in Sources */,
+				D870D46221A6B17500E64263 /* EMJSONValueTransformer.m in Sources */,
+				D8252AB221A0EBE700367C19 /* EuroManager.m in Sources */,
+				D8252AAF21A0EBE700367C19 /* EMMessage.m in Sources */,
+				D8252AB021A0EBE700367C19 /* EMInteractiveAction.m in Sources */,
+				D870D46621A6B17500E64263 /* EMJSONModelError.m in Sources */,
+				D8252AB521A0EBE700367C19 /* BaseObject.m in Sources */,
+				D8252AC121A0EBE700367C19 /* EMRegisterRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		58B511ED1A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58B511EE1A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58B511F01A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNEuromsg;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RNEuromsg;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNEuromsg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511ED1A9E6C8500147676 /* Debug */,
+				58B511EE1A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNEuromsg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511F01A9E6C8500147676 /* Debug */,
+				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
+}
