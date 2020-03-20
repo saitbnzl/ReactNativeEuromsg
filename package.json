@@ -2,7 +2,7 @@
   "_args": [
     [
       "react-native-euromsg@1.0.4",
-      "/Users/saitbanazili/pencerern"
+      "/Users/saitbanazili/repos/pencerern"
     ]
   ],
   "_from": "react-native-euromsg@1.0.4",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/react-native-euromsg/-/react-native-euromsg-1.0.4.tgz",
   "_spec": "1.0.4",
-  "_where": "/Users/saitbanazili/pencerern",
+  "_where": "/Users/saitbanazili/repos/pencerern",
   "author": {
     "name": "Sait Banazılı"
   },

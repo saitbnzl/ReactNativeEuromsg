@@ -32,6 +32,7 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
+    implementation "com.google.firebase:firebase-core:16.0.7"
     api project(':euromobileandroid')
 }
   

@@ -22,11 +22,17 @@
 @synthesize pushType;
 @synthesize sound;
 @synthesize contentAvailable;
+@synthesize body;
+@synthesize subtitle;
+@synthesize title;
 
 +(EMJSONKeyMapper*)keyMapper
 {
     return [[EMJSONKeyMapper alloc] initWithDictionary:@{
                                                          @"aps.alert": @"messageContent",
+                                                         @"aps.alert.body": @"body",
+                                                         @"aps.alert.subtitle": @"subtitle",
+                                                         @"aps.alert.title": @"title",
                                                          @"aps.category": @"category",
                                                          @"aps.content-available": @"contentAvailable",
                                                          @"aps.sound" : @"sound",

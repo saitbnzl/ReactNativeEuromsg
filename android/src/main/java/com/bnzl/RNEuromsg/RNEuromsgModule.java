@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.facebook.react.bridge.ActivityEventListener;
@@ -18,15 +18,15 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 import euromsg.com.euromobileandroid.EuroMobileManager;
 import euromsg.com.euromobileandroid.utils.EuroLogger;
-
-import static com.google.android.gms.internal.zzs.TAG;
 
 
 public class RNEuromsgModule extends ReactContextBaseJavaModule implements ActivityEventListener, LifecycleEventListener {
@@ -42,7 +42,7 @@ public class RNEuromsgModule extends ReactContextBaseJavaModule implements Activ
   }
 
   public class Constant {
-    public static final String EURO_KEY = "APP_ID";
+    public static final String EURO_KEY = "Pencere_Android";
   }
 
   private ReactApplicationContext reactContext;
@@ -52,16 +52,19 @@ public class RNEuromsgModule extends ReactContextBaseJavaModule implements Activ
     this.reactContext = reactContext;
     this.reactContext.addActivityEventListener(this);
 
-    this.sharedEuroManagerInstance = this.sharedEuroManager(reactContext, Constant.EURO_KEY, "402215696693");
+    this.sharedEuroManagerInstance = this.sharedEuroManager(reactContext.getApplicationContext(), Constant.EURO_KEY, "402215696693");
   }
 
   @Override
   public void onNewIntent(Intent intent) {
-    Log.d("onNewIntent", intent.toString());
     Bundle extras = intent.getExtras();
     if(extras!=null){
+      Log.d("onNewIntent", extras.getString("url", "none"));
       WritableMap params = Arguments.createMap();
       params.putString("url",extras.getString("url"));
+      params.putString("pushId",extras.getString("pushId"));
+      params.putString("message",extras.getString("message",""));
+
       this.sendEvent(this.reactContext,"opened", params);
     }
   }
@@ -82,17 +85,35 @@ public class RNEuromsgModule extends ReactContextBaseJavaModule implements Activ
     } catch (PackageManager.NameNotFoundException e) {
       e.printStackTrace();
     }
+    sharedEuroManagerInstance = new EuroMobileManager(Constant.EURO_KEY,this.reactContext.getApplicationContext());
     sharedEuroManagerInstance.setEmail(config.getString("email"));
     sharedEuroManagerInstance.setEuroUserKey(config.getString("userKey"));
     if(pInfo!=null)
       sharedEuroManagerInstance.setAppVersion(pInfo.versionName);
+    if(sharedEuroManagerInstance.subscription.getToken()==null){
+        Log.d("token fallback",config.getString("email"));
+        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
+          @Override
+          public void onSuccess(InstanceIdResult instanceIdResult) {
+            String deviceToken = instanceIdResult.getToken();
+            sharedEuroManagerInstance.subscription.setToken(deviceToken);
+          }
+        });
+    }
+    Log.d("configuring", " " + sharedEuroManagerInstance.subscription.getToken() + " " + config.getString("userKey"));
     sharedEuroManagerInstance.sync();
+  }
+
+  @ReactMethod
+  public static  void setPermit(Boolean permit) {
+    sharedEuroManagerInstance.setPermit(permit);
   }
 
   public static void registerToken(String token){
     sharedEuroManagerInstance.subscribe(token);
   }
 
+  @ReactMethod
   public static void reportRead(String pushId){
     sharedEuroManagerInstance.reportRead(pushId);
   }
@@ -114,9 +135,16 @@ public class RNEuromsgModule extends ReactContextBaseJavaModule implements Activ
     if (extras != null) {
       try {
         String url = extras.getString("url");
+        String pushId = extras.getString("pushId");
+        String message = extras.getString("message");
+
         Log.d("parseIntent url", url);
         if(url!=null)
           params.putString("url", url);
+        if(pushId!=null)
+          params.putString("pushId", pushId);
+        if(message!=null)
+          params.putString("message", message);
       }
       catch (Exception e){
         params = Arguments.createMap();

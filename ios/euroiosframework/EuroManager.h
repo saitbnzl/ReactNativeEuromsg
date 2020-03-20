@@ -10,30 +10,13 @@
 #import "EMMessage.h"
 #import "EMTools.h"
 #import <UIKit/UIKit.h>
+#import <UserNotifications/UserNotifications.h>
 
-#define SDK_VERSION @"1.4"
+#define SDK_VERSION @"1.9.1"
 
-@protocol EuroManagerDelegate <NSObject>
-
-@required
-- (void) didReceivePushMessage:(EMMessage *) message;
-
-@optional
-- (void) didReceiveImageMessage:(EMMessage *) message;
-- (void) didReceiveVideoMessage:(EMMessage *) message;
-- (void) didReceiveBackgroundMessage:(EMMessage *) message;
-- (void) didRegisterSuccessfully;
-- (void) didFailRegister:(NSError *) error;
-
-@end
-
-@interface EuroManager : NSObject {
+@interface EuroManager : NSObject <UNUserNotificationCenterDelegate> {
 
 }
-
-
-@property (nonatomic, assign) id<EuroManagerDelegate> delegate;
-
 
 + (EuroManager *)sharedManager:(NSString *) applicationKey;
 
@@ -52,11 +35,9 @@
 - (void) removeUserParameters;
 - (void) addParams:(NSString *) key value:(id) value;
 
-
 - (void) registerToken:(NSData *) tokenData;
 - (void) handlePush:(NSDictionary *) pushDictionary;
-//- (void) handlePush:(NSDictionary *) pushDictionary completionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
-//- (void) handleInteractiveAction:(NSString *) actionIdentifier userInfo:(NSDictionary *) userInfo;
+- (void) registerForPush;
 
 - (void) synchronize;
 

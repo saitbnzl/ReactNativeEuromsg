@@ -15,7 +15,7 @@
 // The MIT License in plain English: http://www.touch-code-magazine.com/JSONModel/MITLicense
 
 #import <Foundation/Foundation.h>
-#import "../JSONModel/EMJSONModelArray.h"
+#import "EMJSONModelArray.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 

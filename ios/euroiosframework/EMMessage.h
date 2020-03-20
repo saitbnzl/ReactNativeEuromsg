@@ -8,14 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-#import "JSONModel/EMJSONModelLib.h"
+#import "EMJSONModel.h"
 
 @interface EMMessage : EMJSONModel
 
 @property (nonatomic, strong) NSString<Optional> *pushId;
 @property (nonatomic, strong) NSString<Optional> *altUrl;
 @property (nonatomic, strong) NSString<Optional> *cId;
-@property (nonatomic, strong) NSString<Optional> *messageContent;
+@property (nonatomic, strong) id<Optional> messageContent;
+@property (nonatomic, strong) NSString<Optional> *body;
+@property (nonatomic, strong) NSString<Optional> *subtitle;
+@property (nonatomic, strong) NSString<Optional> *title;
 @property (nonatomic, strong) NSString<Optional> *URL;
 @property (nonatomic, strong) NSString<Optional> *mediaURL;
 @property (nonatomic, strong) NSString<Optional> *category;

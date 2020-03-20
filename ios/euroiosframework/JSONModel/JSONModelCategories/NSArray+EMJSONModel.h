@@ -16,7 +16,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "../JSONModel/EMJSONModel.h"
+#import "EMJSONModel.h"
 
 /**
  * Exposes invisible JSONModelArray methods

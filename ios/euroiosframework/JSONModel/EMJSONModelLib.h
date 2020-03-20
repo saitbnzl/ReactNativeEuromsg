@@ -17,14 +17,14 @@
 #import <Foundation/Foundation.h>
 
 //JSONModel transformations
-#import "JSONModelTransformations/EMJSONValueTransformer.h"
-#import "JSONModelTransformations/EMJSONKeyMapper.h"
+#import "EMJSONValueTransformer.h"
+#import "EMJSONKeyMapper.h"
 
 //basic JSONModel classes
-#import "JSONModel/EMJSONModelError.h"
-#import "JSONModel/EMJSONModelClassProperty.h"
-#import "JSONModel/EMJSONModel.h"
+#import "EMJSONModelError.h"
+#import "EMJSONModelClassProperty.h"
+#import "EMJSONModel.h"
 
 //models array
-#import "JSONModelCategories/NSArray+EMJSONModel.h"
-#import "JSONModel/EMJSONModelArray.h"
+#import "NSArray+EMJSONModel.h"
+#import "EMJSONModelArray.h"

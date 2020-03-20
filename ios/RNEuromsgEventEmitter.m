@@ -10,7 +10,7 @@
 #import "RNEuromsgEventEmitter.h"
 #import "euroiosframework/EMMessage.h"
 
-#define INTEGRATION_ID @"APP_ID"
+#define INTEGRATION_ID @"Pencere_IOS"
 
 @implementation RNEuromsgEventEmitter
 
@@ -53,7 +53,7 @@ RCT_EXPORT_METHOD(getInitialNotification:(RCTPromiseResolveBlock)resolve
 
     if (initialNotification) {
         initialNotification[@"remote"] = @YES;
-
+        //[[RNEuromsgEventEmitter sharedEuroManager] handlePush:initialNotification];
         resolve(initialNotification);
     } else if (initialLocalNotification) {
         resolve([initialLocalNotification userInfo]);
@@ -63,8 +63,25 @@ RCT_EXPORT_METHOD(getInitialNotification:(RCTPromiseResolveBlock)resolve
 }
 
 RCT_EXPORT_METHOD(initWithAppId:(NSString*)appId{
-    // TODO
+    // @TODO
     // We need method swizzling, I guess
+})
+
+RCT_EXPORT_METHOD(setBadgeNumber:(int) count ){
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:count];
+    });
+}
+
+RCT_EXPORT_METHOD(setPermit:(BOOL) permission
+{
+    NSString *p = @"N";
+    if(permission){
+        p=@"Y";
+    }
+
+    [[RNEuromsgEventEmitter sharedEuroManager] addParams:@"pushPermit" value:p];
+    [[RNEuromsgEventEmitter sharedEuroManager] synchronize];
 })
 
 RCT_EXPORT_METHOD(configUser:(NSDictionary*) config
