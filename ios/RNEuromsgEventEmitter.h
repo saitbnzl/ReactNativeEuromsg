@@ -15,11 +15,13 @@
 
 @interface RNEuromsgEventEmitter : RCTEventEmitter <RCTBridgeModule>
 
-extern NSDictionary *initalNotification;
 
-+ (EuroManager *)sharedEuroManager;
+extern NSDictionary *initalNotification;
+extern NSString *appKey;
+
++ (EuroManager *)sharedEuroManager:(NSString*)appKey;
 + (id)allocWithZone:(struct _NSZone *)zone;
 - (void)tellJS:(NSString*)name withBody:(NSDictionary*)body;
 
-@end
 
+@end

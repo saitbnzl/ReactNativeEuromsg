@@ -10,17 +10,16 @@
 #import "RNEuromsgEventEmitter.h"
 #import "euroiosframework/EMMessage.h"
 
-#define INTEGRATION_ID @"Pencere_IOS"
-
 @implementation RNEuromsgEventEmitter
 
 RCT_EXPORT_MODULE(RNEuromsg);
 
-+ (EuroManager *)sharedEuroManager {
++ (EuroManager *)sharedEuroManager:(NSString *)key {
     static EuroManager *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedMyManager = [EuroManager sharedManager:INTEGRATION_ID];
+        appKey = key;
+        sharedMyManager = [EuroManager sharedManager:key];
     });
     return sharedMyManager;
 }
@@ -77,30 +76,30 @@ RCT_EXPORT_METHOD(setPermit:(BOOL) permission
 {
     NSString *p = @"N";
     if(permission){
-        p=@"Y";
+        p=@"A";
     }
 
-    [[RNEuromsgEventEmitter sharedEuroManager] addParams:@"pushPermit" value:p];
-    [[RNEuromsgEventEmitter sharedEuroManager] synchronize];
+                  [[RNEuromsgEventEmitter sharedEuroManager:appKey] addParams:@"pushPermit" value:p];
+    [[RNEuromsgEventEmitter sharedEuroManager:appKey] synchronize];
 })
 
 RCT_EXPORT_METHOD(configUser:(NSDictionary*) config
 {
     NSLog(@"configUser %@ %@", config[@"email"], config[@"userKey"]);
     if(config[@"email"]){
-       [RNEuromsgEventEmitter sharedEuroManager].userEmail = config[@"email"];
+       [RNEuromsgEventEmitter sharedEuroManager:appKey].userEmail = config[@"email"];
     }
     
     if(config[@"userKey"]){
-        [[RNEuromsgEventEmitter sharedEuroManager] setUserKey:config[@"userKey"]];
+        [[RNEuromsgEventEmitter sharedEuroManager:appKey] setUserKey:config[@"userKey"]];
     }
     
-    [[RNEuromsgEventEmitter sharedEuroManager] synchronize];
+    [[RNEuromsgEventEmitter sharedEuroManager:appKey] synchronize];
 })
 
 RCT_EXPORT_METHOD(setDebug:(BOOL) isDebug
 {
-    [[RNEuromsgEventEmitter sharedEuroManager] setDebug:isDebug];
+    [[RNEuromsgEventEmitter sharedEuroManager:appKey] setDebug:isDebug];
 })
 
 @end
